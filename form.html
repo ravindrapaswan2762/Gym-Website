@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>
+    </head>
+    <link rel="stylesheet" href="form.css">
+    <body>
+        <header class="header">
+            <div class="logo-box">
+                <img src="images/fitnessLogo.png" class="logo">
+            </div>
+            <nav class="navBar">
+                <ul class="navList">
+                    <li class="nav-link"><a href="index.html">Home</a></li>
+                    <li class="nav-link"><a href="classes.html">Classes</a></li>
+                    <li class="nav-link"><a href="products.html">Products</a></li>
+                    <li class="nav-link"><a href="blogs.html">Blogs</a></li>
+                    <button type="button">Join</button>
+                </ul>
+            </nav>
+    
+            <div class="mobile-navbar-btn">
+                <ion-icon class="mobile-navbar-icon" name="menu-outline"></ion-icon>
+                <ion-icon class="mobile-navbar-icon" name="close-outline"></ion-icon>
+            </div>
+        </header>
+        
+        <div class="container">
+            <main>
+                <!----------------------------------------------------------------------------------- form -->
+                <section class="formSec">
+                    <div class="formDiv">
+                        <form onsubmit="handleSubmit(event)">
+                            <label>Full Name</label>:<br> <input type="text" placeholder="Enter name" required><br>
+                            <label>Email</label>:<br> <input type="email" placeholder="Enter email" required><br>
+                            <label>Mobile No.</label>:<br> <input type="text" placeholder="Mobile no." required><br>
+                
+                            <label>Duration</label>: 
+                            <div class="flexRadioDiv">
+                                <div class="inputDiv">
+                                    <input type="radio" id="option1" name="duration" value="Monthly">
+                                    <label for="option1">Monthly</label><br>
+                                </div>
+                
+                                <div class="inputDiv">
+                                    <input type="radio" id="option2" name="duration" value="Yearly">
+                                    <label for="option2">Yearly</label><br>
+                                </div>
+                            </div>
+                
+                            <label>Mode of payment</label>: 
+                            <div class="flexRadioDiv">
+                                <div class="inputDiv">
+                                    <input type="radio" id="option3" name="payment" value="Cash">
+                                    <label for="option3">Cash </label><br>
+                                </div>
+                
+                                <div class="inputDiv">
+                                    <input type="radio" id="option4" name="payment" value="Online">
+                                    <label for="option4">Online</label><br>
+                                </div>
+                            </div>
+                
+                            <label>Personal Training</label>: 
+                            <div>
+                                <div class="inputDiv">
+                                    <input type="radio" id="option5" name="training" value="Required">
+                                    <label for="option5">Required</label><br>
+                                </div>
+                
+                                <div class="inputDiv notReq">
+                                    <input type="radio" id="option6" name="training" value="Not Required">
+                                    <label for="option6">Not Required</label><br>
+                                </div>
+                            </div>
+                
+                            <div class="term">
+                               <div class="x"> <input type="checkbox" id="option7" name="terms" value="TermsAccepted" required></div>
+                                <div class="y"><label for="option7">I accept all term and conditions provide in this form</label><br></div>
+                            </div>
+                            <button class="button" type="submit">Buy Plan</button>
+                            
+                        </form>
+                    </div>
+                </section>
+                
+            </main>
+        </div>
+    </body>
+</html>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="index.js"></script>

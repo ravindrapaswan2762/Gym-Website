@@ -1,0 +1,289 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Times New Roman", Times, serif;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+body{
+    overflow: hidden;
+}
+section{
+    height: 95vh;
+    width: 100%;
+}
+
+
+.header {
+    height: 8rem;
+    margin: 0;
+    padding: 0 4.8rem; /* Changed comma to space */
+    background-color: #757575;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: Helvetica, Arial, Sans-Serif;
+}
+
+.logo-box {
+    height: 9rem;
+    width: 15rem;
+    margin: 2rem;
+    color: white;
+    padding: 0.3rem 1rem;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    height: 222%;
+    padding-top: 15%; 
+}
+
+.navList {
+    display: flex;
+    gap: 4.8rem;
+    list-style: none;
+    padding: 0 3rem;
+}
+
+.navList li { 
+    font-size: 3rem;
+    color: white;
+    cursor: pointer;
+}
+.navBar .navList button{
+    /* padding: 1% 5%;
+    background-color: #f4a623;
+    border-radius: 7%;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none; */
+    display: none;
+}
+
+.mobile-navbar-icon {
+    height: 3.6rem;
+    width: 3.6rem;
+    color: white;
+}
+
+.mobile-navbar-btn {
+    display: none;
+    background: transparent;
+    cursor: pointer;
+}
+.mobile-navbar-icon[name="close-outline"] {
+    display: none;
+}
+.navBar .navList li a{
+    text-decoration: none;
+    color: white;
+}
+.navBar .navList button a{
+    text-decoration: none;
+    color: white;
+}
+
+/* ---------------------------------------------------------------------------------- */
+.formSec{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    background-image: url('images/classImg22.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    
+   
+}
+.formDiv{
+    position: absolute;
+    top: 5%;
+    height: 80%;
+    width: 30%;
+    border-radius: 3%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+
+    background: rgb(117, 117, 117, .7);
+    
+}
+.formDiv form{
+    position: absolute;
+    top: 5%;
+    font-size: 2rem;
+    line-height: 2.7rem;
+    padding: 0% 5%;
+}
+.formDiv form input{
+    height: 20%;
+    padding: 1.5% 5%;
+    color: #000;
+    background-color: #fff;
+    border-radius: 5px; 
+    font-size: 2rem;
+    border: none;
+
+}
+.flexRadioDiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.inputDiv{
+    display: flex;
+    width: 30%;
+    align-items: center;
+}
+input #option7{
+   display: flex;
+   align-items: center;
+   justify-content: baseline;
+}
+.term{
+    display: flex;
+    justify-content: space-between;
+}
+.x{
+    width: 10%;
+    display: flex;
+    align-items: center;
+}
+input #option7{
+    padding: 13% 13%;
+    height: 60%;
+    width: 60%;
+}
+.button{
+    padding: 1% 5%;
+    cursor: pointer;
+    border-radius: 4px;
+    border: none;
+    background-color: orange;
+    font-weight: bold;
+}
+@media only screen and (max-width: 1000px){
+    .formDiv {
+        width: 40%;
+    }
+}
+@media only screen and (max-width: 760px){
+    .formDiv {
+        width: 60%;
+    }
+}
+@media only screen and (max-width: 530px){
+    .formDiv {
+        width: 70%;
+    }
+}
+@media only screen and (max-width: 440px){
+    .formDiv {
+        width: 95%;
+    }
+    .formDiv form{
+        font-size: 1.5rem;
+    }
+    .flexRadioDiv {
+        width: 70%;
+    }
+    .formDiv form input   {
+        width: 70%;
+    }
+}
+/* *************************************************************************************** */
+
+/* ---------------------------------------------------------------------- Media Query */
+@media(max-width: 62em) {
+    .mobile-navbar-btn {
+        display: block;
+    }
+
+    .header {
+        position: relative;
+        padding: 0 3rem;
+        z-index: 9999;
+    }
+
+    .navBar {
+        width: 100%;
+        height: 100vh;
+        background: rgb(117, 117, 117);
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        transform: translateX(100%);
+        transition: all 0.5s linear;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        overflow-x: hidden;
+
+    }
+
+    .navList {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navList li{
+        color: white;
+    }
+    .navBar .navList button{
+        padding: 6% 28%;
+        background-color: #f4a623;
+        border-radius: 7%;
+        font-size: 2rem;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .active .navBar {
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    .active .mobile-navbar-btn .mobile-navbar-icon[name="close-outline"] {
+        display: block;
+    }
+
+    .active .mobile-navbar-btn .mobile-navbar-icon[name="menu-outline"] {
+        display: none;
+    }
+
+    .mobile-navbar-icon {
+        height: 3.6rem;
+        width: 3.6rem;
+        color: #1f1c1c;
+    }
+}
+
+@media (max-width: 35em) {
+    .header {
+        padding: 0 2.4rem;
+    }
+}
+
+
